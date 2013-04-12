@@ -1,0 +1,222 @@
+
+/************************************************************************/
+/* 0. CSS RESET */
+/************************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+				  box-sizing: border-box;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+
+/************************************************************************/
+/* 1. ICON FONT */
+/************************************************************************/
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon.eot');
+	src:url('icomoon.eot?#iefix') format('embedded-opentype'),
+			url('icomoon.woff') format('woff'),
+			url('icomoon.ttf') format('truetype'),
+			url('icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-arrow-up, .icon-facebook, .icon-linkedin, .icon-twitter, .icon-dribbble, .icon-google-plus {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-arrow-up:before {
+	content: "\e000";
+}
+.icon-facebook:before {
+	content: "\e001";
+}
+.icon-linkedin:before {
+	content: "\e002";
+}
+.icon-twitter:before {
+	content: "\e003";
+}
+.icon-dribbble:before {
+	content: "\e004";
+}
+.icon-google-plus:before {
+	content: "\e005";
+}
+
+
+
+
+
+/************************************************************************/
+/* 2. SASS VARIABLES AND MIXINS */
+/************************************************************************/
+$body-font:    		  	'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$special-font: 			  'Gentium Basic', Georgia, serif;
+$base-font-size: 			 16px;
+$baseline: 				  	($base-font-size * 1.5);
+	
+$text-color:        	 #626262;
+$light-text-color:  	 #C3C3C3;
+$heading-one-color: 	 #2F2F2F;
+$link-color:        	 #F54128;
+$border-color:      	 #D1D6D4;
+$progress-bar-outer:   #F2F4E6;
+$progress-bar-inner:   #A1C457;
+$freebie-bg:           $heading-one-color;
+
+$heading-one-size:    ($baseline * 1.5);
+$heading-one-leading: ($baseline * 2  );
+$heading-two-size:     $baseline;
+$heading-two-leading: ($baseline * 1.5  );
+
+$default-spacing:     ($baseline * 2);
+
+
+@mixin transition {
+	-webkit-transition: color .2s ease-in-out;
+	   -moz-transition: color .2s ease-in-out;
+	     -o-transition: color .2s ease-in-out;
+		    	transition: color .2s ease-in-out;
+}
+
+
+
+
+
+/************************************************************************/
+/* 3. TYPOGRAPHY AND GENERAL STYLING */
+/************************************************************************/
+body {
+	color: $text-color;
+	font: 300 #{$base-font-size}/#{$baseline} $body-font;
+}
+
+p {
+	margin-bottom: $baseline;
+}
+
+h1 {
+	color: $heading-one-color;
+	font: #{$heading-two-size}/#{$heading-one-leading} $special-font;
+	width: 50%;
+	margin: 0 auto;
+}
+
+h2 {
+	font: #{$heading-two-size}/#{$heading-two-leading} $special-font;
+	width: 70%;
+	margin: 0 auto;
+}
+
+h1, h2 {
+	margin-bottom: $default-spacing;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	@include transition;
+	&:hover {
+		color: $heading-one-color;
+	}
+}
+
+hr {
+	background: $border-color;
+	border: none;
+	height: 1px;
+	margin: $default-spacing auto;
+	width: 45%;
+}
+
+/************************************************************************/
+/* 4. LAYOUT */
+/************************************************************************/
+.container {
+	margin: 0 auto;
+	text-align: center;
+	width: 95%;
+}
+
+.page-section {
+	padding: $default-spacing;
+}
+
+.logo img {
+	max-height: 144px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8">
+	<title>MotM | Coming Soon</title>
+	<meta name="description" content="Prepare for the greatest comic the world has even seen.">
+	<meta name="author" content="Michael Klambatsen">
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic' rel='stylesheet'>
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!-- [if lt IE 9]
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicon and Apple Icons -->
+
+</head>
+<body>
+
+	<!-- HEADER -->
+	<header class="main-header" id="top">
+		<div class="container page-section">
+			<h1>The Meanies are coming.</h1>
+			<%= link_to (image_tag('logo.png', alt: "Prepare for the greatest comic the world has even seen.")), root_path, class: "logo" %>
+			<hr>
+			<h2>Prepare yourself for the web  comic extravaganza of the month. <a href="#status">It will be finished soon</a>. We've got a <a href="#freebie">little something</a> to hold you over though.</h2>
+		</div> <!-- end container -->
+	</header>
+
+
+
+
+	
+	<!-- FORM -->
+	<section>
+		<div class="form-container">
+			<div class="page-section" id="signup">
+				<form action="/" method="post" id="signup-form">
+					<p><input type="text" id="name" name="name" placeholder="name"></p>
+					<p><input type="text" id="email" name="email" placeholder="email address"></p>
+					<p class="form-note"><em>"I won't send you any spam emails, scout's honor!"</em></p>
+					<p><input type="submit" value="Get Notified"></p>
+				</form>
+			</div><!-- end page section -->
+		</div> <!-- end form-container -->
+	</section>
+
+
+
+
+
+
+	<!-- STATUS REPORT -->
+	<section>
+		<div class="container page-section" id="status">
+			<h2>- Status Report -</h2>
+			<div id="progress-bar"></div> <!-- end progress-bar -->
+		</div> <!-- end container -->
+	</section>	
+
+
+
+
+	<!-- FREEBIE -->
+	<section>
+		<div class="container page-section freebie-container" id="freebie">
+			<hgroup>
+				<h2>- Did I Hear... a little something?-</h2>
+				<h3>Yes you did. We'll give a free comic to everyone who signs up using the form at the <a href="#signup">top</a>.</h3>
+			</hgroup>
+
+			<figure><img src="images/freebie.png" alt="Freebie"></figure>
+		</div> <!-- end container -->
+	</section>
+	
+	
+	
+	
+	
+	<!-- CONTACT -->
+	<section>
+		<div class="container page-section">
+			<h2>You can get in touch by sending us an <a href="mailto:dmi3000@gmail.com">email</a> or via social networks.</h2>
+
+			<ul class="social">
+				<li><a href=""><span class="icon-twitter"></span></a></li>
+				<li><a href=""><span class="icon-facebook"></span></a></li>
+				<li><a href=""><span class="icon-google-plus"></span></a></li>
+				<li><a href=""><span class="icon-dribbble"></span></a></li>
+				<li><a href=""><span class="icon-linkedin"></span></a></li>
+			</ul>
+		</div>
+	</section>
+
+
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer page-section">
+		<p>&copy; Dima Markus 2013</p>
+
+		<a href="" class="go-top" title="Back to Top"><span class="icon-arrow-up"></span></a>
+	</footer>
+
+
+	<!-- JavaScript -->
+<!--<script src="js/jquery.js"></script> -->
+
+</body>
+</html>
